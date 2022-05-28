@@ -2,10 +2,10 @@ from wand.image import Image
 from google.cloud import storage
 
 client = storage.Client()
-thumbnail_bucket = 'tim-acloud-guru-thumbnails'
+thumbnail_bucket = 'my-project-thumbnails'
 
 
-def gen_thumbnail(data, context):
+def gcp_gen_thumbnail(data, context):
     # Get attributes from JSON payload
     bucket = data['attributes']['bucketId']
     image = data['attributes']['objectId']
